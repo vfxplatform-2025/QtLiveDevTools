@@ -166,6 +166,73 @@ pip install PySide6
 pip install mcp  # Model Context Protocol SDK
 ```
 
+## Python Environment Requirements
+
+### Critical: Python Version Consistency
+
+**IMPORTANT**: MCP 서버는 Claude CLI와 **동일한 Python 환경**에서 실행되어야 합니다.
+
+**문제 상황**:
+- PyCharm에서는 작동하는데 VSCode에서는 안 됨
+- Terminal에서는 되는데 IDE에서는 안 됨
+- 같은 MCP 설정인데 프로젝트마다 다르게 작동
+
+**원인**:
+각 툴이 서로 다른 Python 환경을 사용하기 때문:
+- PyCharm: 프로젝트별 Interpreter 설정 (`/usr/bin/python3.9`)
+- VSCode: Workspace 설정 (`~/.venv/bin/python`)
+- Terminal: `$PATH`의 첫 번째 Python (`/usr/local/bin/python3.11`)
+- Rez: 패키지별 Python 버전 (`rez-env python-3.11`)
+
+**해결 방법**:
+
+1. **현재 환경 확인**:
+   ```bash
+   # Claude CLI를 실행한 Terminal에서
+   which python
+   python --version
+
+   # MCP 서버가 사용하는 Python
+   grep qtlivedevtools ~/.claude.json -A 5
+   ```
+
+2. **일관된 환경 사용**:
+   ```bash
+   # 가상환경 활성화 후 Claude 실행
+   source /path/to/venv/bin/activate
+   claude
+
+   # 또는 Rez 환경에서
+   rez-env python-3.11 pyside6 -- claude
+   ```
+
+3. **MCP 설정에서 절대 경로 사용**:
+   ```json
+   {
+     "qtlivedevtools": {
+       "command": "/storage/.NAS5/rocky9_core/TD/mcp/mcp-servers/.venv/bin/python",
+       "args": ["/full/path/to/qtlivedevtools_mcp.py"]
+     }
+   }
+   ```
+
+4. **IDE별 Python 설정 통일**:
+   - PyCharm: Settings → Project Interpreter → MCP 가상환경 선택
+   - VSCode: Python: Select Interpreter → MCP 가상환경 선택
+
+**검증 방법**:
+```bash
+# 1. Claude가 사용하는 Python 확인
+which python
+
+# 2. MCP 서버 수동 실행 테스트
+/storage/.NAS5/rocky9_core/TD/mcp/mcp-servers/.venv/bin/python \
+  /path/to/qtlivedevtools_mcp.py
+
+# 3. 모듈 import 가능 여부 확인
+python -c "import PySide6; print('OK')"
+```
+
 ## Key Technical Decisions
 
 ### ✅ Chosen Approach: .ui File + Socket Control

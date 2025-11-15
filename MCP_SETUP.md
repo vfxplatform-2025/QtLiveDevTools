@@ -90,6 +90,49 @@ cd /storage/.NAS5/rocky9_core/TD/users/chulho/tools/QtLiveDevTools
    /storage/.NAS5/rocky9_core/TD/mcp/mcp-servers/.venv/bin/pip list | grep mcp
    ```
 
+### 문제: 서로 다른 툴에서 같은 MCP가 실행되지 않음
+
+**원인**:
+- **Python 버전 환경 차이**: PyCharm, VSCode, Terminal 등 각 툴이 서로 다른 Python 환경을 사용
+- Claude CLI를 실행한 환경과 MCP 서버가 요구하는 Python 버전이 불일치
+- 예: Claude는 시스템 Python 3.9 사용, MCP는 가상환경 Python 3.11 필요
+
+**해결 방법**:
+
+1. **현재 Python 환경 확인**:
+   ```bash
+   # Claude가 실행되는 환경에서 확인
+   which python
+   python --version
+
+   # MCP 서버 설정에 지정된 Python 확인
+   /storage/.NAS5/rocky9_core/TD/mcp/mcp-servers/.venv/bin/python --version
+   ```
+
+2. **일관된 Python 환경 사용**:
+   - MCP 서버 설정(`~/.claude.json`)의 `command`가 올바른 Python 경로를 가리키는지 확인
+   - 가상환경 활성화 후 Claude CLI 실행:
+     ```bash
+     source /storage/.NAS5/rocky9_core/TD/mcp/mcp-servers/.venv/bin/activate
+     claude
+     ```
+
+3. **Rez 환경 사용 시**:
+   ```bash
+   # 특정 Python 버전과 함께 실행
+   rez-env python-3.11 -- claude
+
+   # PySide6 포함 환경
+   rez-env python-3.11 pyside6 -- claude
+   ```
+
+4. **툴별 설정 확인**:
+   - **PyCharm**: Settings → Python Interpreter 확인
+   - **VSCode**: Python: Select Interpreter 명령 실행
+   - **Terminal**: `echo $PATH` 확인하여 Python 경로 우선순위 확인
+
+**중요**: MCP 서버는 Claude CLI와 **동일한 Python 환경**에서 접근 가능한 모듈을 사용해야 합니다. 환경이 다르면 import 에러나 연결 실패가 발생할 수 있습니다.
+
 ## 환경 변수 (선택사항)
 
 ```bash
