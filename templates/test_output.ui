@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <class>TestDialog</class>
+  <widget class="QDialog" name="TestDialog">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>TestDialog</string>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+      <property name="text">
+        <string>Click Me</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>200</y>
+          <width>100</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+  </widget>
+</ui>

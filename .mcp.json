@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "qtlivedevtools": {
+      "command": "rez-env",
+      "args": ["pyside6", "--", "python", "qtlivedevtools_mcp.py"],
+      "cwd": "/core/TD/mcp/mcp-servers"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>file_browser</class>
+  <widget class="QDialog" name="file_browser">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>500</width>
+        <height>350</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>file_browser</string>
+    </property>
+    <widget class="QLabel" name="labelPath">
+      <property name="text">
+        <string>File Path:</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>100</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLineEdit" name="editPath">
+      <property name="geometry">
+        <rect>
+          <x>130</x>
+          <y>20</y>
+          <width>300</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="btnBrowse">
+      <property name="text">
+        <string>...</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>440</x>
+          <y>20</y>
+          <width>40</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QListWidget" name="listFiles">
+      <property name="geometry">
+        <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>460</width>
+          <height>230</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="btnOK">
+      <property name="text">
+        <string>OK</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>300</x>
+          <y>300</y>
+          <width>80</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="btnCancel">
+      <property name="text">
+        <string>Cancel</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>390</x>
+          <y>300</y>
+          <width>90</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+  </widget>
+</ui>

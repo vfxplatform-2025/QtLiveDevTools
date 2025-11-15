@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>test_rez</class>
+  <widget class="QDialog" name="test_rez">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>300</width>
+        <height>200</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>test_rez</string>
+    </property>
+  </widget>
+</ui>

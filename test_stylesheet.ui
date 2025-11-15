@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>StyledDialog</class>
+  <widget class="QDialog" name="StyledDialog">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>500</width>
+        <height>400</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>StyledDialog</string>
+    </property>
+    <widget class="QPushButton" name="primaryBtn">
+      <property name="text">
+        <string>Primary Action</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>100</y>
+          <width>150</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="secondaryBtn">
+      <property name="text">
+        <string>Secondary</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>220</x>
+          <y>100</y>
+          <width>150</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+    <property name="styleSheet">
+      <string>
+    QPushButton {
+        border: 2px solid #2196F3;
+        border-radius: 4px;
+        padding: 8px;
+        background-color: white;
+    }
+    QPushButton:hover {
+        background-color: #E3F2FD;
+    }
+    QPushButton#primaryBtn {
+        background-color: #2196F3;
+        color: white;
+        font-weight: bold;
+    }
+    </string>
+    </property>
+  </widget>
+</ui>

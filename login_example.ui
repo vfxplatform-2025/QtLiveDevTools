@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>LoginDialog</class>
+  <widget class="QDialog" name="LoginDialog">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>250</height>
+      </rect>
+    </property>
+    <widget class="QLabel" name="labelUsername">
+      <property name="text">
+        <string>Username:</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>100</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLineEdit" name="editUsername">
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>50</y>
+          <width>200</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLabel" name="labelPassword">
+      <property name="text">
+        <string>Password:</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>100</y>
+          <width>100</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLineEdit" name="editPassword">
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>100</y>
+          <width>200</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="btnLogin">
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>160</y>
+          <width>100</width>
+          <height>30</height>
+        </rect>
+      </property>
+      <property name="text">
+        <string>로그인</string>
+      </property>
+    </widget>
+    <property name="windowTitle">
+      <string>사용자 로그인</string>
+    </property>
+  </widget>
+</ui>

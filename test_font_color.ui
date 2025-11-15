@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>FontTest</class>
+  <widget class="QDialog" name="FontTest">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>FontTest</string>
+    </property>
+    <widget class="QLabel" name="styledLabel">
+      <property name="text">
+        <string>Styled Text</string>
+      </property>
+      <property name="font">
+        <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
+        </font>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>300</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="coloredButton">
+      <property name="text">
+        <string>Colored Button</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>100</y>
+          <width>150</width>
+          <height>40</height>
+        </rect>
+      </property>
+      <property name="styleSheet">
+        <string>QPushButton { background-color: #4CAF50; color: white; }</string>
+      </property>
+    </widget>
+  </widget>
+</ui>

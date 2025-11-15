@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>XMLTest</class>
+  <widget class="QDialog" name="XMLTest">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>XMLTest</string>
+    </property>
+    <widget class="QLabel" name="complexLabel">
+      <property name="text">
+        <string>Complex Widget</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>200</width>
+          <height>30</height>
+        </rect>
+      </property>
+      <property name="customProperty">
+        <custom>
+          <nested>
+            <deep>value</deep>
+          </nested>
+        </custom>
+      </property>
+    </widget>
+  </widget>
+</ui>

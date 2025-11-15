@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>ResourceTest</class>
+  <widget class="QDialog" name="ResourceTest">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>ResourceTest</string>
+    </property>
+    <widget class="QPushButton" name="iconBtn">
+      <property name="text">
+        <string>With Icon</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>100</y>
+          <width>100</width>
+          <height>40</height>
+        </rect>
+      </property>
+      <property name="icon">
+        <iconset resource=":/icons/button_icon.png" theme="document-new" />
+      </property>
+    </widget>
+  </widget>
+  <resources>
+    <include location="resources.qrc" />
+  </resources>
+</ui>

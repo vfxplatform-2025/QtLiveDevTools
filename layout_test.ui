@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>layout_test</class>
+  <widget class="QDialog" name="layout_test">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>500</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>layout_test</string>
+    </property>
+    <layout class="QVBoxLayout" name="mainLayout" />
+    <layout class="QHBoxLayout" name="buttonLayout" />
+    <layout class="QGridLayout" name="formLayout" />
+    <widget class="QLabel" name="headerLabel">
+      <property name="text">
+        <string>레이아웃 테스트</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>100</x>
+          <y>20</y>
+          <width>200</width>
+          <height>30</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="button1">
+      <property name="text">
+        <string>버튼 1</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>100</y>
+          <width>100</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="button2">
+      <property name="text">
+        <string>버튼 2</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>160</x>
+          <y>100</y>
+          <width>100</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="button3">
+      <property name="text">
+        <string>버튼 3</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>270</x>
+          <y>100</y>
+          <width>100</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+  </widget>
+</ui>

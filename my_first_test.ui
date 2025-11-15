@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>my_first_test</class>
+  <widget class="QDialog" name="my_first_test">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>500</width>
+        <height>400</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>my_first_test</string>
+    </property>
+    <widget class="QPushButton" name="testButton">
+      <property name="text">
+        <string>Click Me</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>200</x>
+          <y>180</y>
+          <width>100</width>
+          <height>40</height>
+        </rect>
+      </property>
+    </widget>
+  </widget>
+</ui>

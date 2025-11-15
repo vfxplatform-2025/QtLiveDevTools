@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>MainWindowTest</class>
+  <widget class="QMainWindow" name="MainWindowTest">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>MainWindowTest</string>
+    </property>
+    <action name="actionNew">
+      <property name="text">
+        <string>새로 만들기(&amp;N)</string>
+      </property>
+      <property name="shortcut">
+        <string>Ctrl+N</string>
+      </property>
+    </action>
+    <action name="actionOpen">
+      <property name="text">
+        <string>열기(&amp;O)</string>
+      </property>
+      <property name="shortcut">
+        <string>Ctrl+O</string>
+      </property>
+    </action>
+    <action name="actionSave">
+      <property name="text">
+        <string>저장(&amp;S)</string>
+      </property>
+      <property name="shortcut">
+        <string>Ctrl+S</string>
+      </property>
+    </action>
+  </widget>
+</ui>

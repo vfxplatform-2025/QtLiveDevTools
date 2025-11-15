@@ -1,0 +1,19 @@
+# QtLiveDevTools Dependencies
+
+# PySide6 - Use via Rez
+# Run with: rez-env pyside6 -- python <script.py>
+
+# MCP SDK (install globally or in venv)
+# pip install mcp
+
+# Standard library (included in Python):
+# - xml.etree.ElementTree (XML parsing)
+# - socket (network communication)
+# - threading (concurrent socket server)
+# - json (command serialization)
+# - base64 (screenshot encoding)
+# - argparse (CLI arguments)
+
+# Optional (for future enhancements):
+# watchdog - File watching for .ui auto-reload
+# pillow - Advanced image processing

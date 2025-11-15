@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>LayoutTest</class>
+  <widget class="QDialog" name="LayoutTest">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>LayoutTest</string>
+    </property>
+    <layout class="QVBoxLayout" name="mainLayout">
+      <spacer name="spacer_8790">
+        <property name="orientation">
+          <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint">
+          <size>
+            <width>20</width>
+            <height>40</height>
+          </size>
+        </property>
+      </spacer>
+    </layout>
+  </widget>
+</ui>

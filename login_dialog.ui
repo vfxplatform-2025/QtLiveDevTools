@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>login_dialog</class>
+  <widget class="QDialog" name="login_dialog">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>login_dialog</string>
+    </property>
+    <widget class="QLabel" name="titleLabel">
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>20</y>
+          <width>100</width>
+          <height>30</height>
+        </rect>
+      </property>
+      <property name="text">
+        <string>사용자 로그인</string>
+      </property>
+    </widget>
+    <widget class="QLabel" name="usernameLabel">
+      <property name="text">
+        <string>Username:</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>80</y>
+          <width>80</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLineEdit" name="usernameInput">
+      <property name="geometry">
+        <rect>
+          <x>140</x>
+          <y>80</y>
+          <width>200</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLabel" name="passwordLabel">
+      <property name="text">
+        <string>Password:</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>120</y>
+          <width>80</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+    <widget class="QLineEdit" name="passwordInput">
+      <property name="geometry">
+        <rect>
+          <x>140</x>
+          <y>120</y>
+          <width>200</width>
+          <height>25</height>
+        </rect>
+      </property>
+      <property name="echoMode">
+        <string>Password</string>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="loginButton">
+      <property name="geometry">
+        <rect>
+          <x>140</x>
+          <y>180</y>
+          <width>100</width>
+          <height>35</height>
+        </rect>
+      </property>
+      <property name="text">
+        <string>로그인</string>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="cancelButton">
+      <property name="geometry">
+        <rect>
+          <x>250</x>
+          <y>180</y>
+          <width>100</width>
+          <height>35</height>
+        </rect>
+      </property>
+      <property name="text">
+        <string>취소</string>
+      </property>
+    </widget>
+  </widget>
+</ui>

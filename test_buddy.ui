@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>BuddyTest</class>
+  <widget class="QDialog" name="BuddyTest">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>BuddyTest</string>
+    </property>
+    <widget class="QLabel" name="nameLabel">
+      <property name="text">
+        <string>&amp;Name:</string>
+      </property>
+      <property name="geometry">
+        <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>80</width>
+          <height>25</height>
+        </rect>
+      </property>
+      <property name="buddy">
+        <string>nameInput</string>
+      </property>
+    </widget>
+    <widget class="QLineEdit" name="nameInput">
+      <property name="geometry">
+        <rect>
+          <x>140</x>
+          <y>50</y>
+          <width>200</width>
+          <height>25</height>
+        </rect>
+      </property>
+    </widget>
+  </widget>
+</ui>

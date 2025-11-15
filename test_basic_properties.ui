@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>TestDialog</class>
+  <widget class="QDialog" name="TestDialog">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>TestDialog</string>
+    </property>
+    <widget class="QLabel" name="label1">
+      <property name="text">
+        <string>Simple Text</string>
+      </property>
+      <property name="wordWrap">
+        <bool>true</bool>
+      </property>
+      <property name="alignment">
+        <set>Qt::AlignCenter</set>
+      </property>
+    </widget>
+  </widget>
+</ui>

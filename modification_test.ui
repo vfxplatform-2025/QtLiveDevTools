@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <!-- Generated for PYSIDE6 -->
+  <class>modification_test</class>
+  <widget class="QDialog" name="modification_test">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>400</width>
+        <height>300</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>modification_test</string>
+    </property>
+    <widget class="QLabel" name="testLabel">
+      <property name="geometry">
+        <rect>
+          <x>100</x>
+          <y>100</y>
+          <width>200</width>
+          <height>30</height>
+        </rect>
+      </property>
+      <property name="text">
+        <string>수정된 텍스트</string>
+      </property>
+    </widget>
+    <widget class="QPushButton" name="testButton">
+      <property name="geometry">
+        <rect>
+          <x>150</x>
+          <y>150</y>
+          <width>100</width>
+          <height>40</height>
+        </rect>
+      </property>
+      <property name="text">
+        <string>클릭하세요</string>
+      </property>
+    </widget>
+  </widget>
+</ui>
