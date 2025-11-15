@@ -1,11 +1,24 @@
 # QtLiveDevTools
 
-> **Claude CLI와 대화로 Qt/PySide6 UI를 생성하고 수정하는 MCP 서버**
+> **Claude CLI와 대화로 Qt/PySide6 UI를 생성하고 수정하는 도구**
+>
+> **MCP Server** + **Claude Code Skills** 두 가지 방식 지원
 
 [![Status](https://img.shields.io/badge/status-production--ready-green)]()
 [![Python](https://img.shields.io/badge/python-3.9+-blue)]()
 [![PySide](https://img.shields.io/badge/PySide-6%20%7C%202-orange)]()
+[![MCP](https://img.shields.io/badge/MCP-enabled-purple)]()
+[![Skills](https://img.shields.io/badge/Skills-enabled-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-blue)]()
+
+## 🎯 두 가지 사용 방식
+
+| 방식 | 설치 | 속도 | 적합한 용도 |
+|------|------|------|------------|
+| **MCP Server** | `~/.claude.json` 설정 | ⚡ 빠름 | 프로덕션, 복잡한 기능 |
+| **Skills** | 폴더 복사만 | 🚀 간편 | 프로토타이핑, 팀 공유 |
+
+**추천:** 빠른 시작은 Skills, 프로덕션은 MCP Server
 
 ## ✨ 주요 기능
 
@@ -87,25 +100,53 @@ claude
 
 ## 📦 설치
 
-### 필수 요구사항
-
-- Python 3.9+
-- PySide6 또는 PySide2
-- MCP (Model Context Protocol)
-
-### 설치 방법
+### Option 1: Skills (추천 - 빠른 시작)
 
 ```bash
 # 프로젝트 클론
-git clone https://github.com/yourusername/QtLiveDevTools.git
+git clone https://github.com/vfxplatform-2025/QtLiveDevTools.git
 cd QtLiveDevTools
 
-# PySide6 설치
+# Skills는 이미 포함되어 있음!
+ls .claude/skills/qtlivedevtools/
+# SKILL.md
+# examples.md
+
+# 바로 사용 가능
+claude
+# "Create a Qt login dialog" → 자동 실행!
+```
+
+**장점:**
+- ✅ 설정 불필요 (폴더만 있으면 됨)
+- ✅ Git으로 팀과 자동 공유
+- ✅ 프로젝트별 커스터마이징 가능
+
+### Option 2: MCP Server (프로덕션)
+
+```bash
+# 1. 프로젝트 클론
+git clone https://github.com/vfxplatform-2025/QtLiveDevTools.git
+cd QtLiveDevTools
+
+# 2. PySide6 설치
 pip install PySide6
+
+# 3. MCP 서버 등록
+claude mcp add qtlivedevtools \
+  /path/to/python \
+  /path/to/QtLiveDevTools/qtlivedevtools_mcp.py
 
 # 또는 Rez 환경에서
 rez-env pyside6
 ```
+
+**장점:**
+- ✅ 빠른 응답 속도
+- ✅ 전용 Tool 제공 (preview_ui, analyze_ui 등)
+- ✅ 안정적인 독립 프로세스
+
+**상세 가이드:** [MCP_SETUP.md](MCP_SETUP.md) | [SKILLS_GUIDE.md](SKILLS_GUIDE.md)
 
 ---
 
@@ -340,27 +381,38 @@ rez-env pyside2 maya-2023 -- mayapy my_tool.py
 
 ## 📖 문서
 
-- **[PROJECT_COMPLETE.md](PROJECT_COMPLETE.md)** - 프로젝트 완성 보고서
+### 사용 가이드
+- **[SKILLS_GUIDE.md](SKILLS_GUIDE.md)** ⭐ - **Skills vs MCP 비교 및 사용법**
+- **[MCP_SETUP.md](MCP_SETUP.md)** - MCP 서버 설정 가이드
+- **[.claude/skills/qtlivedevtools/examples.md](.claude/skills/qtlivedevtools/examples.md)** - Skills 실전 예제
+
+### 기술 문서
+- **[CLAUDE.md](CLAUDE.md)** - 아키텍처 설명 (MCP + Skills)
 - **[QT_ALL_FEATURES_SUPPORTED.md](QT_ALL_FEATURES_SUPPORTED.md)** - Qt 기능 상세
 - **[REFERENCE_CLONE_GUIDE.md](REFERENCE_CLONE_GUIDE.md)** - UI 복제 가이드
 - **[PYSIDE_VERSION_GUIDE.md](PYSIDE_VERSION_GUIDE.md)** - 버전 변환 가이드
-- **[CLAUDE.md](CLAUDE.md)** - 아키텍처 설명
+
+### 개발 문서
+- **[PROJECT_COMPLETE.md](PROJECT_COMPLETE.md)** - 프로젝트 완성 보고서
 - **[SESSION_NOTES.md](SESSION_NOTES.md)** - 개발 세션 노트
 
 ---
 
 ## 🏆 핵심 혁신
 
-### 1. 무한 확장성
+### 1. 두 가지 사용 방식 (MCP + Skills)
+**유연한 선택:** 프로덕션에는 MCP, 프로토타이핑에는 Skills
+
+### 2. 무한 확장성
 Raw XML 지원으로 새로운 Qt 기능 즉시 사용 가능
 
-### 2. Claude CLI 완전 통합
+### 3. Claude CLI 완전 통합
 자연어로 UI 생성, 스크린샷 + XML 듀얼 분석
 
-### 3. Git-Friendly
+### 4. Git-Friendly
 텍스트 기반 .ui 파일 (XML), Diff 가능, 버전 관리 용이
 
-### 4. VFX 표준 준수
+### 5. VFX 표준 준수
 Qt Designer 100% 호환, Maya/Houdini 통합, Rez 지원
 
 ---
