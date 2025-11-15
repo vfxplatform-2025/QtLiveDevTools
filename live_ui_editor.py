@@ -14,10 +14,10 @@ import base64
 from pathlib import Path
 from io import BytesIO
 
-from PySide2.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
-from PySide2.QtCore import Qt, QTimer, Signal, QObject, QFile
-from PySide2.QtGui import QPixmap
-from PySide2.QtUiTools import QUiLoader
+from PySide6.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
+from PySide6.QtCore import Qt, QTimer, Signal, QObject, QFile
+from PySide6.QtGui import QPixmap
+from PySide6.QtUiTools import QUiLoader
 
 from ui_manager import UIManager
 
