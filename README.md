@@ -2,23 +2,27 @@
 
 > **Claude CLI와 대화로 Qt/PySide6 UI를 생성하고 수정하는 도구**
 >
-> **MCP Server** + **Claude Code Skills** 두 가지 방식 지원
+> **Claude Code Skills** 방식으로 구현
 
 [![Status](https://img.shields.io/badge/status-production--ready-green)]()
 [![Python](https://img.shields.io/badge/python-3.9+-blue)]()
 [![PySide](https://img.shields.io/badge/PySide-6%20%7C%202-orange)]()
-[![MCP](https://img.shields.io/badge/MCP-enabled-purple)]()
 [![Skills](https://img.shields.io/badge/Skills-enabled-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-blue)]()
 
-## 🎯 두 가지 사용 방식
+## 🚀 Quick Start
 
-| 방식 | 설치 | 속도 | 적합한 용도 |
-|------|------|------|------------|
-| **MCP Server** | `~/.claude.json` 설정 | ⚡ 빠름 | 프로덕션, 복잡한 기능 |
-| **Skills** | 폴더 복사만 | 🚀 간편 | 프로토타이핑, 팀 공유 |
+**설치 불필요!** 프로젝트를 clone하면 바로 사용 가능합니다.
 
-**추천:** 빠른 시작은 Skills, 프로덕션은 MCP Server
+```bash
+git clone https://github.com/vfxplatform-2025/QtLiveDevTools.git
+cd QtLiveDevTools
+claude
+
+# 자연스럽게 대화하세요!
+You: "로그인 창 만들어줘"
+Claude: [자동으로 Skill 활성화 → login.ui 생성]
+```
 
 ## ✨ 주요 기능
 
@@ -100,7 +104,7 @@ claude
 
 ## 📦 설치
 
-### Option 1: Skills (추천 - 빠른 시작)
+### Skills 방식 (현재 사용 중)
 
 ```bash
 # 프로젝트 클론
@@ -121,36 +125,19 @@ claude
 - ✅ 설정 불필요 (폴더만 있으면 됨)
 - ✅ Git으로 팀과 자동 공유
 - ✅ 프로젝트별 커스터마이징 가능
+- ✅ Python 환경 충돌 없음
 
-### Option 2: MCP Server (프로덕션)
+### ~~MCP Server (비활성화됨)~~
 
-```bash
-# 1. 프로젝트 클론
-git clone https://github.com/vfxplatform-2025/QtLiveDevTools.git
-cd QtLiveDevTools
+MCP Server 방식은 현재 비활성화되어 있습니다. Skills 방식이 더 간편하고 안정적입니다.
 
-# 2. PySide6 설치
-pip install PySide6
+**참고:** MCP 코드는 여전히 포함되어 있지만 (`qtlivedevtools_mcp.py`), 사용하지 않습니다.
 
-# 3. MCP 서버 등록
-claude mcp add qtlivedevtools \
-  /path/to/python \
-  /path/to/QtLiveDevTools/qtlivedevtools_mcp.py
-
-# 또는 Rez 환경에서
-rez-env pyside6
-```
-
-**장점:**
-- ✅ 빠른 응답 속도
-- ✅ 전용 Tool 제공 (preview_ui, analyze_ui 등)
-- ✅ 안정적인 독립 프로세스
-
-**상세 가이드:** [MCP_SETUP.md](MCP_SETUP.md) | [SKILLS_GUIDE.md](SKILLS_GUIDE.md)
+**상세 가이드:** [SKILLS_GUIDE.md](SKILLS_GUIDE.md)
 
 ---
 
-## 🛠️ MCP 함수 (11개)
+## 🛠️ Skills 기능
 
 ### UI 생성/수정
 1. **create_ui_file** - .ui 파일 생성
@@ -400,8 +387,8 @@ rez-env pyside2 maya-2023 -- mayapy my_tool.py
 
 ## 🏆 핵심 혁신
 
-### 1. 두 가지 사용 방식 (MCP + Skills)
-**유연한 선택:** 프로덕션에는 MCP, 프로토타이핑에는 Skills
+### 1. Claude Code Skills 통합
+**설정 불필요:** Git clone만 하면 즉시 사용 가능
 
 ### 2. 무한 확장성
 Raw XML 지원으로 새로운 Qt 기능 즉시 사용 가능
@@ -414,6 +401,9 @@ Raw XML 지원으로 새로운 Qt 기능 즉시 사용 가능
 
 ### 5. VFX 표준 준수
 Qt Designer 100% 호환, Maya/Houdini 통합, Rez 지원
+
+### 6. 팀 자동 공유
+`.claude/skills/` 폴더가 Git에 포함되어 팀원 모두 자동 사용
 
 ---
 
